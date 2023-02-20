@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 const startServer = () => {
 
     try {
-        connectDB(process.env.MONGODB_URL)
+        // connectDB(process.env.MONGODB_URL)
         app.listen(5000, () =>
         console.log('Server is listening on port http://localhost:5000')
       );
