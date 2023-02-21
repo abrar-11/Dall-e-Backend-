@@ -19,15 +19,19 @@ app.get("/", async (req, res) => {
     res.send("Hello from DALL-E");
 });
 
-const startServer = () => {
-    try {
-        connectDB(process.env.MONGODB_URL);
-        app.listen(port, () =>
+app.listen(port, () =>
             console.log("Server is listening on port http://localhost:", port)
         );
-    } catch (error) {
-        console.log(error);
-    }
-};
 
-startServer();
+// const startServer = () => {
+//     try {
+//         connectDB(process.env.MONGODB_URL);
+//         app.listen(port, () =>
+//             console.log("Server is listening on port http://localhost:", port)
+//         );
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
+
+// startServer();
